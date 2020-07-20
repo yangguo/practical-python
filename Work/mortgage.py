@@ -26,9 +26,11 @@ while principal > 0 and exit ==0:
             total_paid = total_paid + payment
         else: exit=1
     if exit==0:
-        print(month,round(total_paid,2),round(principal,2))
+        # print(month,round(total_paid,2),round(principal,2))
+        fstr = f'month{month} total paid ${total_paid:0.2f},principal is ${principal:0.2f}'
+        print(fstr)
     else:
         month-=1
     
-print('Total paid', total_paid)
+print('Total paid', f'${total_paid:0.2f}')
 print('Total month', month)
